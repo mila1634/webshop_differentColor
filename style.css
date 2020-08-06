@@ -1,0 +1,186 @@
+/* Basic Styling */
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+ 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  padding: 15px;
+}
+ 
+/* Columns */
+.left {
+  width: 65%;
+  position: relative;
+}
+ 
+.right {
+  width: 35%;
+  margin-top: 60px;
+}
+ 
+ 
+/* Left Column */
+.left img {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+ 
+.left img.active {
+  opacity: 1;
+}
+ 
+ 
+ 
+/* opis proizvoda */
+.product-about {
+  border-bottom: 1px solid #DCDCDC;
+  margin-bottom: 20px;
+}
+.product-about h6 {
+  font-size: 18px;
+  color: #358ED7;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+}
+.product-about h1 {
+  font-weight: 300;
+  font-size: 52px;
+  color: #43484D;
+  letter-spacing: -2px;
+}
+.product-about p {
+  font-size: 16px;
+  font-weight: 300;
+  color: #a9a9a9;
+  line-height: 24px;
+}
+ 
+/* promjena proizvoda */
+.product-color span {
+  font-size: 14px;
+  font-weight: 400;
+  color: #86939E;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+ 
+/* boja proizvoda */
+.product-color {
+  margin-bottom: 30px;
+}
+ 
+.product-color-choose div {
+  display: inline-block;
+}
+ 
+.product-color-choose input[type="radio"] {
+  display: none;
+}
+ 
+.product-color-choose input[type="radio"] + label span {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: -1px 4px 0 0;
+  vertical-align: middle;
+  cursor: pointer;
+  border-radius: 50%;
+}
+ 
+.product-color-choose input[type="radio"] + label span {
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.33);
+}
+ 
+.product-color-choose input[type="radio"]#red + label span {
+  background-color: #C91524;
+}
+.product-color-choose input[type="radio"]#blue + label span {
+  background-color: #314780;
+}
+.product-color-choose input[type="radio"]#black + label span {
+  background-color: #323232;
+}
+ 
+
+/* cijena proizvoda */
+.product-price {
+  display: flex;
+  align-items: center;
+}
+ 
+.product-price span {
+  font-size: 26px;
+  font-weight: 300;
+  color: #202020;
+  margin-right: 20px;
+}
+ 
+button {
+  display: inline-block;
+  background-color: #0087e6;
+  border-radius: 6px;
+  border: 0;
+  font-size: 16px;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 12px 30px;
+  transition: all .5s;
+}
+button:hover {
+  background-color: #64af3d;
+}
+ 
+/* responzivno */
+@media (max-width: 940px) {
+  .container {
+    flex-direction: column;
+    margin-top: 60px;
+  }
+ 
+  .left,
+  .right {
+    width: 100%;
+  }
+    
+  .left {
+      left: -25%;
+      margin: 50px 20px;
+  }
+    
+  .right {
+      z-index: 1;
+  }       
+ 
+  .left img {
+    width: 300px;
+    right: 0;
+    top: -85px;
+    left: initial;
+  }
+}
+ 
+@media (max-width: 535px) {
+  .left img {
+    width: 320px;
+    top: -85px;
+  }
+  .left {
+      left: -15%;
+      margin-bottom: 110px;
+      margin-top: 20px;
+  }
+    
+}
